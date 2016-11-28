@@ -53,7 +53,7 @@ app.post('/insert', function (req, res) {
 });
 
 app.post('/update', function (req, res) {
-       collection.update({Name:req.body.name1},{$set:{Age:req.body.age1.value,Email:req.body.email1.value}}, function(err, docs) {
+       collection.update({Name:req.body.name1},{$set:{Age:req.body.age1,Email:req.body.email1}}, function(err, docs) {
 		   if(err){
 			           console.log("Not found person with the name");
 			           return;
